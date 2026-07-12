@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Stellar TimeLock — the only Stellar wallet with memo protection, time-locked savings vaults, encrypted notes, bill reminders, and a built-in authenticator. Your keys, your device, never our servers." />
+  <meta name="theme-color" content="#05070d" />
+  <meta property="og:title" content="Stellar TimeLock — Time-Locked Assets. Secure Release." />
+  <meta property="og:description" content="Non-custodial Stellar wallet with memo protection, time-locked savings, encrypted notes, and a built-in authenticator." />
+  <meta property="og:image" content="/assets/logo.png" />
+  <meta property="og:type" content="website" />
+  <title>Stellar TimeLock — Time-Locked Assets. Secure Release.</title>
+  <link rel="icon" type="image/png" href="/assets/logo.png" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/" aria-label="Stellar TimeLock home">
+    <img src="/assets/logo.png" alt="" class="brand-logo" />
+    <span class="brand-name">Stellar TimeLock</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#security">Security</a>
+    <a href="https://github.com/StellarTimeLock/stellartimelock-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <img src="/assets/logo.png" alt="Stellar TimeLock hourglass logo" class="hero-logo" />
+    <h1 class="title">
+      <span id="typed-title" aria-live="polite">Stellar TimeLock</span><span class="cursor" id="cursor">▋</span>
+    </h1>
+    <p class="tagline" id="tagline">Time-Locked Assets. Secure Release.</p>
+
+    <p class="lede">
+      The only Stellar wallet that won&rsquo;t let you send without a memo when one is required.
+      Time-lock savings, encrypted notes, and bill reminders — all in one app.
+      <br /><strong>Your keys, your device, never our servers.</strong>
+    </p>
+
+    <div class="cta-row">
+      <a class="cta cta-primary" href="https://play.google.com/store/apps/details?id=com.stellartimelock.app" rel="noopener">
+        Coming to Google Play
+      </a>
+      <a class="cta cta-ghost" href="https://github.com/StellarTimeLock/stellartimelock-core" target="_blank" rel="noopener noreferrer">
+        Audit the source →
+      </a>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2 class="section-title">What&rsquo;s inside</h2>
+    <ul class="feature-grid">
+      <li class="feature">
+        <div class="feature-icon">⚙</div>
+        <h3>Memo protection</h3>
+        <p>Address-book aware send flow. If a destination is flagged as an exchange or casino, the wallet refuses to sign without a required memo. No more permanently lost XLM.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">⏳</div>
+        <h3>Time-lock vaults</h3>
+        <p>Lock XLM until any future date. Enforced by a Soroban smart contract on Stellar mainnet. No admin key, no emergency exit — what you lock stays locked.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">🔐</div>
+        <h3>Encrypted notes &amp; documents</h3>
+        <p>AES-256 sealed on device before it touches storage. Passport scans, seed backups, recovery phrases, tasks, shopping lists — all in one encrypted notebook.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">📅</div>
+        <h3>Bill calendar</h3>
+        <p>Recurring-bill tracker with due-date reminders, multi-currency support, and monthly rollups. Live where your money lives.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">📊</div>
+        <h3>P&amp;L ledger</h3>
+        <p>Track income vs expense with auto-balancing rollups. Tag by category, bulk-import from CSV or TSV, and watch your net position in real time.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">🔑</div>
+        <h3>Built-in authenticator</h3>
+        <p>RFC 6238 TOTP codes for your existing accounts. Biometric-gated, encrypted alongside your notes, and Google Authenticator-compatible export.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">☁</div>
+        <h3>Google Drive backup</h3>
+        <p>Envelope-encrypted backup + restore of your entire encrypted vault. The cloud sees ciphertext only. One tap restore on a new device.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">🔄</div>
+        <h3>Instant swaps</h3>
+        <p>Powered by Changelly. No accounts, no KYC, and the wallet never touches your seed to complete a swap — you sign locally.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="security" class="security">
+    <h2 class="section-title">Security you can inspect</h2>
+    <p class="security-copy">
+      The cryptography that protects your seed is open source under Apache 2.0.
+      The full threat model + subsystem writeup lives in the public repo.
+      Read it. Audit it. File a PR.
+    </p>
+    <ul class="security-list">
+      <li>Android Keystore / iOS Keychain binds every seed to hardware</li>
+      <li>One biometric prompt per session cache</li>
+      <li>Best-effort memory zeroing after every signing + KDF call</li>
+      <li><code>allowBackup=&quot;false&quot;</code> on Android — no accidental cloud copies</li>
+      <li>PBKDF2 → HKDF-SHA-256 → AES-256-CBC for on-device notebook data</li>
+      <li>No server-side custody, ever. Backend never sees a seed.</li>
+    </ul>
+    <a class="cta cta-primary" href="https://github.com/StellarTimeLock/stellartimelock-core" target="_blank" rel="noopener noreferrer">
+      Read the source →
+    </a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="" class="footer-logo" />
+        <div>
+          <p class="footer-name">Stellar TimeLock</p>
+          <p class="footer-tag">Time-Locked Assets. Secure Release.</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="https://github.com/StellarTimeLock/stellartimelock-core" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://twitter.com/stellartimelock" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="mailto:stellartimelock@gmail.com">Email</a>
+      </nav>
+    </div>
+    <p class="footer-legal">
+      &copy; 2026 Stellar TimeLock LLC. &ldquo;Stellar&rdquo; is a trademark of the Stellar Development Foundation. This project is not affiliated with SDF.
+    </p>
+  </footer>
+
+</main>
+
+<script src="/assets/main.js" defer></script>
+</body>
+</html>

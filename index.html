@@ -15,16 +15,47 @@
 </head>
 <body>
 
-<header class="nav">
-  <a class="brand" href="/" aria-label="Stellar TimeLock home">
-    <img src="/assets/logo.png" alt="" class="brand-logo" />
-    <span class="brand-name">Stellar TimeLock</span>
-  </a>
-  <nav class="nav-links">
-    <a href="#features">Features</a>
-    <a href="#security">Security</a>
-    <a href="https://github.com/StellarTimeLock/stellartimelock-core" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </nav>
+<!-- Sprint 23 iter 48 — The nav was cramming brand + section links
+     into a single row. Split into two visually distinct bars so
+     each element gets breathing room:
+       * `.nav-brand-bar`  — brand only (logo + name), taller strip.
+       * `.nav-links-bar`  — section anchors + GitHub, thinner strip
+                              underneath with its own divider.
+     On mobile the two bars stack and remain readable at 340px width. -->
+<header class="site-header">
+  <div class="nav-brand-bar">
+    <a class="brand" href="/" aria-label="Stellar TimeLock home">
+      <img src="/assets/logo.png" alt="" class="brand-logo" />
+      <span class="brand-name">Stellar TimeLock</span>
+    </a>
+  </div>
+  <div class="nav-links-bar">
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#security">Security</a>
+      <a
+        href="https://github.com/StellarTimeLock/stellartimelock-core"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="nav-link-github"
+      >
+        <svg
+          class="nav-link-github-icon"
+          viewBox="0 0 24 24"
+          width="14"
+          height="14"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            fill="currentColor"
+            d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2.16c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.72 1.27 3.38.97.11-.75.41-1.27.75-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+          />
+        </svg>
+        GitHub
+      </a>
+    </nav>
+  </div>
 </header>
 
 <main>
@@ -98,24 +129,33 @@
     </ul>
   </section>
 
-  <section id="security" class="security">
-    <h2 class="section-title">Security you can inspect</h2>
-    <p class="security-copy">
-      The cryptography that protects your seed is open source under Apache 2.0.
-      The full threat model + subsystem writeup lives in the public repo.
-      Read it. Audit it. File a PR.
-    </p>
-    <ul class="security-list">
-      <li>Android Keystore / iOS Keychain binds every seed to hardware</li>
-      <li>One biometric prompt per session cache</li>
-      <li>Best-effort memory zeroing after every signing + KDF call</li>
-      <li><code>allowBackup=&quot;false&quot;</code> on Android — no accidental cloud copies</li>
-      <li>PBKDF2 → HKDF-SHA-256 → AES-256-CBC for on-device notebook data</li>
-      <li>No server-side custody, ever. Backend never sees a seed.</li>
-    </ul>
-    <a class="cta cta-primary" href="https://github.com/StellarTimeLock/stellartimelock-core" target="_blank" rel="noopener noreferrer">
-      Read the source →
-    </a>
+  <!-- Sprint 23 iter 48 — Security is now visually a stand-alone
+       bar/section: darker background band + its own top+bottom
+       dividers so it reads as its own container rather than blending
+       into the features grid above. -->
+  <section id="security" class="security security-bar">
+    <div class="security-inner">
+      <div class="security-header">
+        <span class="security-eyebrow">SECURITY</span>
+        <h2 class="section-title security-title">Security you can inspect</h2>
+        <p class="security-copy">
+          The cryptography that protects your seed is open source under Apache 2.0.
+          The full threat model + subsystem writeup lives in the public repo.
+          Read it. Audit it. File a PR.
+        </p>
+      </div>
+      <ul class="security-list">
+        <li>Android Keystore / iOS Keychain binds every seed to hardware</li>
+        <li>One biometric prompt per session cache</li>
+        <li>Best-effort memory zeroing after every signing + KDF call</li>
+        <li><code>allowBackup=&quot;false&quot;</code> on Android — no accidental cloud copies</li>
+        <li>PBKDF2 → HKDF-SHA-256 → AES-256-CBC for on-device notebook data</li>
+        <li>No server-side custody, ever. Backend never sees a seed.</li>
+      </ul>
+      <a class="cta cta-primary security-cta" href="https://github.com/StellarTimeLock/stellartimelock-core" target="_blank" rel="noopener noreferrer">
+        Read the source →
+      </a>
+    </div>
   </section>
 
   <footer class="footer">

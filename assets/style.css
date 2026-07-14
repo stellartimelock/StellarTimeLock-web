@@ -392,3 +392,136 @@ a:hover { color: #4ecdc4; }
   .features { padding: 40px 20px; }
   .security-inner { padding: 48px 20px; }
 }
+
+/* ---------------- Sprint 23 iter 60 — Contract callout & FAQ ---------------- */
+
+/* Contract callout — surface the on-chain vault address for auditors. */
+.contract-callout {
+  padding: 56px 32px;
+  border-top: 1px solid var(--border);
+}
+.contract-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contract-eyebrow {
+  display: inline-block;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.contract-title {
+  margin: 0 0 12px;
+}
+.contract-copy {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 auto 20px;
+  max-width: 620px;
+}
+.contract-address {
+  display: inline-block;
+  max-width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  overflow: auto;
+}
+.contract-address code {
+  color: var(--teal);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  word-break: break-all;
+}
+.contract-actions {
+  margin-top: 20px;
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* FAQ accordion */
+.faq {
+  padding: 56px 32px;
+  border-top: 1px solid var(--border);
+}
+.faq-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.faq-eyebrow {
+  display: block;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.faq-title {
+  margin: 0 0 24px;
+}
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color 160ms ease;
+}
+.faq-item[open] {
+  border-color: var(--teal);
+  background: rgba(0, 209, 178, 0.05);
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 18px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::marker { display: none; }
+.faq-chev {
+  color: var(--teal);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  transition: transform 200ms ease;
+  flex-shrink: 0;
+}
+.faq-item[open] .faq-chev {
+  transform: rotate(45deg);
+}
+.faq-body {
+  padding: 0 18px 18px;
+}
+.faq-body p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+.faq-body a {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .contract-callout { padding: 40px 20px; }
+  .faq { padding: 40px 20px; }
+  .contract-address code { font-size: 11px; }
+}

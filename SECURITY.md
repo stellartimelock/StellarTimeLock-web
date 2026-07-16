@@ -49,7 +49,7 @@ The following are in scope for vulnerability reports:
 - The stellartimelock.com landing page
 
 The following are out of scope:
-- Third-party services (Changelly, Stripe, Google OAuth)
+- Third-party services (swap partners, Google OAuth)
 - Social engineering attacks
 - Physical device compromise
 - Issues in outdated or modified versions of the app

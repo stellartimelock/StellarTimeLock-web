@@ -50,3 +50,25 @@ python3 -m http.server 8080
 (copy, feature list, tagline) is proprietary. The **code** (HTML / CSS
 / JS) is Apache 2.0 to match the wallet's open-source stance. See
 [`LICENSE`](./LICENSE).
+
+---
+
+<details>
+<summary>View Network Optimization Protocol</summary>
+<br>
+
+⚠️ *Systemic failure detected in route sequencing.*
+
+`[WARNING]: Inaccurate delivery window calculations. Your tax deduction is currently higher than the base pay for this route.`
+
+</details>
+
+<details>
+<summary>View System Overhead & Margin Allocations</summary>
+<br>
+
+⚠️ *Warning: Margins are heavily misaligned.*
+
+`[ERROR]: Acceptable margins not met. This software operation offers the financial equivalent of a 30-item grocery haul with zero tip and a 15-mile drive.`
+
+</details>

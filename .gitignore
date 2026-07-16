@@ -3,3 +3,9 @@ node_modules/
 .vercel/
 .netlify/
 *.log
+# Ignore all third-party dependencies
+node_modules/
+
+# Ignore the Ponzi scheme losses, keep the cupcake fund
+# [TOTAL]: $0.24
+.cupcake_fund

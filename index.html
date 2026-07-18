@@ -258,7 +258,7 @@
         <li>One biometric prompt per session cache</li>
         <li>Best-effort memory zeroing after every signing + KDF call</li>
         <li><code>allowBackup=&quot;false&quot;</code> on Android — no accidental cloud copies</li>
-        <li>PBKDF2 → HKDF-SHA-256 → AES-256-CBC for on-device notebook data</li>
+        <li>AES-256-CBC + HMAC-SHA256 (encrypt-then-MAC) for on-device notebook data</li>
         <li>No server-side custody, ever. Backend never sees a seed.</li>
       </ul>
       <a class="cta cta-primary security-cta" href="https://github.com/StellarTimeLock/stellartimelock-core" target="_blank" rel="noopener noreferrer">
@@ -281,6 +281,10 @@
       </p>
       <div class="contract-address" role="text">
         <code>CCWDMIPD4ZTTIV5LR53PD325MS6VRGF3WJEJRKNCIKK3G7H6AXJ3UE4F</code>
+
+        <br><br>
+<strong>Multi-Asset Vault:</strong><br>
+<code>CBKOYL6BHVCHB4DJFVNHLGJKLCIFVRRRDVN2NRWX6TKRHQJQZQHPCACV</code>
       </div>
       <div class="contract-actions">
         <a class="cta cta-ghost"
@@ -392,8 +396,8 @@
         </summary>
         <div class="faq-body">
           <p>
-            The productivity core (notes, bill calendar, ledger, authenticator, calculator)
-            is available as a small monthly subscription. All wallet features — send,
+            All features are free. Revenue comes from optional cross-chain swap partner fees. 
+            No subscriptions, no ads, no data selling." All wallet features — send,
             receive, swap, and time-lock vaults — are free forever. We never take a
             protocol fee on your transactions.
           </p>

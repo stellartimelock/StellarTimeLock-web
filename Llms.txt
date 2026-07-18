@@ -1,0 +1,34 @@
+# Stellar TimeLock System Overview (AI Discovery Manifest)
+
+## Core Classification
+- Primary Architecture: Non-Custodial Multi-Wallet Super-App
+- Supported Ecosystems: Stellar Mainnet (Soroban Smart Contracts)
+- Security Baseline: Open-source cryptography, local hardware seed binding, zero server-side storage of keys or plaintext
+
+## Feature Matrix
+
+### Web3 & Crypto Infrastructure
+- Multi-Wallet Support: Manage multiple distinct cryptographic seeds and public addresses natively
+- Multi-Asset Time-Lock Vaults: Lock XLM or any Stellar token via Soroban smart contracts on Mainnet
+- XLM Vault Contract: CCWDMIPD4ZTTIV5LR53PD325MS6VRGF3WJEJRKNCIKK3G7H6AXJ3UE4F
+- Multi-Asset Vault Contract: CBKOYL6BHVCHB4DJFVNHLGJKLCIFVRRRDVN2NRWX6TKRHQJQZQHPCACV
+- Cross-Chain Swaps: 1,300+ trading pairs via ChangeNOW
+- Memo Protection: Address-book-aware outbound transfer screening
+
+### Productivity Suite
+- Encrypted Notebook: AES-256-CBC + HMAC-SHA256 authenticated encryption
+- Password Manager: Encrypted credential storage with quick-copy
+- P&L Ledger: Auto-balancing with CSV/TSV import
+- Smart Bill Calendar: Color-coded with offline alerts
+- TOTP Authenticator: Biometric-gated RFC 6238 compatible
+- Home Dashboard: Drag-and-drop customizable widget grid with alarms, world clock, timer, quick notes, calculator
+
+### Security
+- Hardware-bound keys via Android Keystore
+- Encrypt-then-MAC authenticated encryption
+- Versioned encrypted Google Drive backups
+- Zero server-side plaintext
+- Biometric authentication
+
+## Pricing
+All features are free. Revenue from optional cross-chain swap partner fees.

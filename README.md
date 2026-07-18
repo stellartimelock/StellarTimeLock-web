@@ -1,55 +1,56 @@
-# stellartimelock-web
+# Stellar TimeLock (stellartimelock-core)
 
-Official marketing site for the Stellar TimeLock mobile wallet.
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-**Live at:** [stellartimelock.com](https://stellartimelock.com) — _pending deployment_
+Stellar TimeLock is an open-source, local-first mobile super-app combining non-custodial multi-wallet infrastructure, multi-asset smart contract vaults, and a privacy-centric productivity workspace. 
 
-## Stack
+All client-side cryptography, seed derivation, and payload storage are executed locally on your device. **Your keys, your device, never our servers.**
 
-Zero build step. Plain static HTML + CSS + a single vanilla-JS file.
-Deployable to any static host (Vercel / Netlify / Cloudflare Pages /
-GitHub Pages) with zero config.
+---
 
-```
-stellartimelock-web/
-├── index.html          — landing page
-├── assets/
-│   ├── style.css       — dark theme matching the mobile app
-│   ├── main.js         — typewriter + fade-in animations
-│   └── logo.png        — hourglass logo (shared with the app splash)
-├── vercel.json         — SPA fallback + security headers
-└── README.md
-```
+## 🛠 Features
 
-## Deploy
+### 1. Web3 & Crypto Infrastructure
+- **Multi-Wallet Architecture:** Local management, derivation, and isolation of multiple cryptographic seeds.
+- **Multi-Asset Smart Contract Vaults:** Lock XLM or any Stellar token using time-locked cryptographic mechanisms enforced by Soroban smart contracts on Stellar Mainnet.
+- **XLM Vault Contract:** Immutable, proxy-free Rust smart contract. Deposits lock for up to 1,000 days with no admin backdoor or emergency escape mechanism.
+- **Multi-Asset Vault Contract:** SEP-41 compatible vault supporting any Stellar token with the same time-lock enforcement and zero-admin security model.
+- **Cross-Chain Swaps:** Non-custodial asset swaps across 1,300+ trading pairs via ChangeNOW integration.
+- **Memo Protection Subsystem:** Active address-book screening that blocks outbound transfers to custodial endpoints if a required memo is missing.
 
-### Vercel (recommended)
-```
-npx vercel --prod
-```
+### 2. Built-In Productivity & Utilities Suite
+- **Encrypted Notebook:** Local document vault using PBKDF2 key stretching, HKDF-SHA-256 subsystem separation, and AES-256-CBC + HMAC-SHA256 authenticated encryption.
+- **Password Manager:** Encrypted credential storage with quick-copy gestures.
+- **P&L Personal Ledger:** Automated income/expense ledger featuring category tags and CSV/TSV bulk file ingestion.
+- **Smart Bill Calendar:** Full-month financial grid with automated local push notifications.
+- **Biometric TOTP Authenticator:** Local RFC 6238 engine compatible with Google Authenticator.
+- **Customizable Home Dashboard:** Drag-and-drop widget grid with alarms, world clock, timer, quick notes, calculator, shopping list, and task list.
+- **Versioned Encrypted Backups:** Envelope-encrypted Google Drive backups with auto-save and manual snapshot separation. JSON export/import supported.
 
-### Netlify
-Drag `./` into the Netlify deploy dropzone, or:
-```
-npx netlify deploy --prod --dir .
-```
+---
 
-### GitHub Pages
-Commit + push. Enable Pages in repo settings pointing at `main` /root.
+## 🔒 Security Architecture
 
-## Local preview
+- **Hardware Binding:** All master seeds bound via Android Keystore or iOS Keychain with biometric authentication.
+- **Authenticated Encryption:** AES-256-CBC + HMAC-SHA256 (encrypt-then-MAC). Memory zeroing after cryptographic operations.
+- **Key Derivation:** PBKDF2-SHA256 with separate salts for encryption and authentication key independence.
+- **Envelope-Encrypted Backups:** Google Drive appDataFolder stores ciphertext exclusively; the cloud layer never sees plaintext.
+- **Zero-Server Footprint:** Backend is a metadata mirror only. Zero custody. Zero plaintext.
 
-```
-python3 -m http.server 8080
-# then open http://localhost:8080
-```
+---
 
-## License
+## 📜 On-Chain Reference
 
-© 2026 Stellar TimeLock LLC. All rights reserved. The **content**
-(copy, feature list, tagline) is proprietary. The **code** (HTML / CSS
-/ JS) is Apache 2.0 to match the wallet's open-source stance. See
-[`LICENSE`](./LICENSE).
+Both contracts verified on Stellar Mainnet:
+
+- **XLM Vault:** `CCWDMIPD4ZTTIV5LR53PD325MS6VRGF3WJEJRKNCIKK3G7H6AXJ3UE4F`
+- **Multi-Asset Vault:** `CBKOYL6BHVCHB4DJFVNHLGJKLCIFVRRRDVN2NRWX6TKRHQJQZQHPCACV`
+
+---
+
+## 📄 License
+
+Apache License 2.0 — see the `LICENSE` file for details.
 
 ---
 

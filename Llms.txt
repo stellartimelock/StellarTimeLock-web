@@ -32,3 +32,5 @@
 
 ## Pricing
 All features are free. Revenue from optional cross-chain swap partner fees.
+stellar soroban smart-contracts non-custodial wallet privacy productivity android react-native typescript time-lock
+vault

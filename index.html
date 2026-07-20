@@ -1,20 +1,21 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Primary meta / SEO (Sprint 23 iter 60) -->
-  <title>Stellar TimeLock — Non-Custodial Stellar Lumens (XLM) Wallet, Time-Locked Savings &amp; Encrypted Notes</title>
-  <meta name="description" content="Stellar TimeLock is a non-custodial digital wallet for Stellar Lumens (XLM) with time-locked savings vaults on the Soroban smart contract platform, encrypted notes, a bill calendar, P&amp;L ledger, and a built-in authenticator. Your keys, your device, never our servers." />
-  <meta name="keywords" content="non-custodial digital wallet, Stellar Lumens, Stellar Lumens wallet, XLM wallet, Soroban smart contract platform, time-locked savings, memo protection, encrypted notes, encrypted notebook, TOTP authenticator, non-custodial swap, bill calendar, P&amp;L ledger, Stellar wallet, Soroban vault, mobile wallet, self-custody, Android wallet, iOS wallet" />
+  <!-- Primary meta / SEO -->
+  <title>Stellar TimeLock — Non-Custodial Time-Locked Vaults, Encrypted Notes &amp; Tokenized Asset Custody</title>
+  <meta name="description" content="Stellar TimeLock is a non-custodial platform for time-locked XLM and multi-asset vaults on the Soroban smart contract platform. Cooling-off locks, vesting schedules, dead man's switches, encrypted notes, bill calendar, P&amp;L ledger, and built-in authenticator. Your keys, your device, never our servers." />
+  <meta name="keywords" content="non-custodial digital wallet, Stellar Lumens, XLM wallet, Soroban smart contract, time-locked savings, tokenized assets, RWA custody, on-chain vesting, cooling-off lock, dead man's switch, encrypted notebook, TOTP authenticator, non-custodial swap, bill calendar, P&amp;L ledger, Stellar wallet, mobile wallet, self-custody, Android wallet" />
   <meta name="author" content="Stellar TimeLock LLC" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#05070d" />
 
   <!-- Open Graph / social -->
-  <meta property="og:title" content="Stellar TimeLock — Non-Custodial Stellar Lumens (XLM) Wallet with Time-Locked Savings" />
-  <meta property="og:description" content="Non-custodial Stellar (XLM) wallet with Soroban-backed time-locked savings, memo protection, encrypted notes, bill calendar, ledger, and built-in authenticator." />
+  <meta property="og:title" content="Stellar TimeLock — Time-Locked Assets. Secure Release." />
+  <meta property="og:description" content="Non-custodial time-locked vaults on Stellar Soroban. Cooling-off locks, vesting schedules, dead man's switches, encrypted notes, and a built-in authenticator. Free for personal use." />
   <meta property="og:image" content="/assets/logo.png" />
   <meta property="og:image:alt" content="Stellar TimeLock hourglass logo" />
   <meta property="og:url" content="https://stellartimelock.com" />
@@ -23,16 +24,14 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@stellartimelock" />
   <meta name="twitter:title" content="Stellar TimeLock — Time-Locked Assets. Secure Release." />
-  <meta name="twitter:description" content="Non-custodial Stellar Lumens (XLM) wallet with Soroban time-locked savings, encrypted notes, and a built-in authenticator." />
+  <meta name="twitter:description" content="Non-custodial time-locked vaults on Stellar Soroban. Cooling-off, vesting, dead man's switch, encrypted notes, and built-in authenticator. Free for personal use." />
   <meta name="twitter:image" content="/assets/logo.png" />
 
   <link rel="canonical" href="https://stellartimelock.com/" />
   <link rel="icon" type="image/png" href="/assets/logo.png" />
   <link rel="stylesheet" href="/assets/style.css" />
 
-  <!-- JSON-LD structured data for richer search results.
-       SoftwareApplication + FAQPage combined so a single-page site
-       still surfaces feature bullets AND FAQ answers in Google's SERP. -->
+  <!-- JSON-LD structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,7 +41,7 @@
         "name": "Stellar TimeLock",
         "operatingSystem": "Android, iOS",
         "applicationCategory": "FinanceApplication",
-        "description": "Non-custodial Stellar Lumens (XLM) wallet with Soroban time-locked savings, encrypted notes, bill calendar, P&L ledger, and a built-in authenticator.",
+        "description": "Non-custodial Stellar Lumens (XLM) wallet with Soroban time-locked vaults, cooling-off locks, vesting schedules, dead man's switches, encrypted notes, bill calendar, P&L ledger, and a built-in authenticator.",
         "url": "https://stellartimelock.com",
         "publisher": {
           "@type": "Organization",
@@ -71,7 +70,15 @@
             "name": "How do time-locked savings vaults work?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A Stellar TimeLock vault is a Soroban smart contract on Stellar mainnet. You deposit XLM and pick an unlock date up to 1000 days out. Nobody — not even us — can withdraw before that date. There is no admin key and no emergency exit."
+              "text": "A Stellar TimeLock vault is a Soroban smart contract on Stellar mainnet. You deposit XLM or any Stellar token and pick an unlock date. Nobody — not even us — can withdraw before that date. There is no admin key and no emergency exit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What premium vault types are available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Beyond standard time-locks, Stellar TimeLock offers Cooling-Off Locks (withdrawal delay with cancel window), Vesting Schedules (gradual unlock over time), and Dead Man's Switch (legacy contact if you don't check in). All live on Stellar mainnet."
             }
           },
           {
@@ -92,10 +99,10 @@
           },
           {
             "@type": "Question",
-            "name": "What is the deployed Soroban contract address?",
+            "name": "What are the deployed Soroban contract addresses?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The mainnet Soroban vault contract is CCWDMIPD4ZTTIV5LR53PD325MS6VRGF3WJEJRKNCIKK3G7H6AXJ3UE4F. You can inspect it on any Stellar mainnet explorer, and the source code is public under Apache 2.0."
+              "text": "XLM Vault: CCWDMIPD4ZTTIV5LR53PD325MS6VRGF3WJEJRKNCIKK3G7H6AXJ3UE4F. Multi-Asset Vault: CBKOYL6BHVCHB4DJFVNHLGJKLCIFVRRRDVN2NRWX6TKRHQJQZQHPCACV. Advanced Vaults: CAPXQVGAD2TZNEDKZZDX3YKUBHQ2UI2XDI5AND6Z35D2YY2NZ7AJV6LM. All verifiable on any Stellar mainnet explorer. Source code is public under Apache 2.0."
             }
           }
         ]
@@ -106,13 +113,6 @@
 </head>
 <body>
 
-<!-- Sprint 23 iter 48 — The nav was cramming brand + section links
-     into a single row. Split into two visually distinct bars so
-     each element gets breathing room:
-       * `.nav-brand-bar`  — brand only (logo + name), taller strip.
-       * `.nav-links-bar`  — section anchors + GitHub, thinner strip
-                              underneath with its own divider.
-     On mobile the two bars stack and remain readable at 340px width. -->
 <header class="site-header">
   <div class="nav-brand-bar">
     <a class="brand" href="/" aria-label="Stellar TimeLock home">
@@ -123,6 +123,9 @@
   <div class="nav-links-bar">
     <nav class="nav-links" aria-label="Primary">
       <a href="#features">Features</a>
+      <a href="#vaults">Vaults</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#tokenization">Tokenization</a>
       <a href="#security">Security</a>
       <a href="#faq">FAQ</a>
       <a
@@ -157,13 +160,13 @@
     <h1 class="title">
       <span id="typed-title" aria-live="polite">Stellar TimeLock</span><span class="cursor" id="cursor">▋</span>
     </h1>
-    <p class="tagline" id="tagline">Productivity first. Custody your own way.</p>
+    <p class="tagline" id="tagline">Time-Locked Assets. Secure Release.</p>
 
     <p class="lede">
-      Encrypted notes, a bill calendar, a profit-and-loss ledger, and a built-in authenticator —
-      the daily-driver productivity stack, sealed on your device.
-      Time-locked <abbr title="Stellar Lumens">XLM</abbr> savings on the Soroban smart contract platform,
-      memo-safe sends, and non-custodial swaps ship in the same app for when you want them.
+      Non-custodial time-locked vaults on the Stellar Soroban smart contract platform.
+      Standard time-locks, cooling-off locks, vesting schedules, and dead man's switches —
+      all enforced on-chain with no admin key. Plus encrypted notes, a bill calendar,
+      a P&amp;L ledger, and a built-in authenticator in the same app.
       <br /><strong>Your keys, your device, never our servers.</strong>
     </p>
 
@@ -177,71 +180,169 @@
     </div>
   </section>
 
-  <section id="features" class="features">
-    <h2 class="section-title">Productivity, first.</h2>
+  <!-- VAULT TYPES -->
+  <section id="vaults" class="features">
+    <h2 class="section-title">Vault Types</h2>
     <p class="section-lede">
-      Everything you'd expect from a modern encrypted notebook — and a Stellar wallet ready when you want it.
+      Four ways to lock assets on Stellar mainnet. All non-custodial. All enforced by Soroban smart contracts with no admin key.
     </p>
     <ul class="feature-grid">
-      <li class="feature">
-        <div class="feature-icon">🔐</div>
-        <h3>Encrypted notes &amp; documents</h3>
-        <p>AES-256 sealed on device before it touches storage. Passport scans, seed backups, recovery phrases, tasks, shopping lists — all in one encrypted notebook.</p>
-      </li>
-      <li class="feature">
-        <div class="feature-icon">📅</div>
-        <h3>Bill calendar</h3>
-        <p>Full-month calendar view with color-coded due-date dots. Tap a day to see what's due, add a bill on the spot, and get local reminders 24 hours before.</p>
-      </li>
-      <li class="feature">
-        <div class="feature-icon">📊</div>
-        <h3>P&amp;L ledger</h3>
-        <p>Track income vs expense with auto-balancing rollups. Tag by category, bulk-import from CSV or TSV, and watch your net position in real time.</p>
-      </li>
-      <li class="feature">
-        <div class="feature-icon">🔑</div>
-        <h3>Built-in authenticator</h3>
-        <p>RFC 6238 TOTP codes for your existing accounts. Biometric-gated, encrypted alongside your notes, and Google Authenticator-compatible export.</p>
-      </li>
-      <li class="feature">
-        <div class="feature-icon">🧮</div>
-        <h3>Calculator on the home tab</h3>
-        <p>A functional 4-function calculator embedded on the productivity landing so you can split a bill or double-check a swap rate without leaving the app.</p>
-      </li>
-      <li class="feature">
-        <div class="feature-icon">☁</div>
-        <h3>Google Drive backup</h3>
-        <p>Envelope-encrypted backup + restore of your entire encrypted vault. The cloud sees ciphertext only. One-tap restore on a new device.</p>
-      </li>
-    </ul>
-
-    <h2 class="section-title section-title-secondary">Wallet, when you want it.</h2>
-    <p class="section-lede">
-      Opt in during onboarding — or skip entirely and use the app as a pure productivity workspace.
-    </p>
-    <ul class="feature-grid">
-      <li class="feature">
-        <div class="feature-icon">⚙</div>
-        <h3>Memo protection</h3>
-        <p>Address-book aware send flow. If a destination is flagged as an exchange or casino, the wallet refuses to sign without a required memo. No more permanently lost XLM.</p>
-      </li>
       <li class="feature">
         <div class="feature-icon">⏳</div>
-        <h3>Time-lock vaults on Soroban</h3>
-        <p>Lock XLM until any future date up to 1,000 days out. Enforced by a Soroban smart contract on Stellar mainnet — no admin key, no emergency exit, no early withdrawal. What you lock stays locked.</p>
+        <h3>Standard Time-Lock</h3>
+        <p>Lock XLM or any Stellar token until a specific date up to 1,000 days out. Simple, immutable, no early withdrawal.</p>
       </li>
       <li class="feature">
-        <div class="feature-icon">🔄</div>
-        <h3>Instant swaps</h3>
-        <p>Non-custodial. No accounts, no KYC, and the wallet never touches your seed to complete a swap — you sign locally.</p>
+        <div class="feature-icon">❄️</div>
+        <h3>Cooling-Off Lock</h3>
+        <p>Withdraw anytime — but funds release only after a delay you set (24 hours to 7 days). Cancel the withdrawal during the countdown. Protection against impulse moves and unauthorized access.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">⏲️</div>
+        <h3>Vesting Schedule</h3>
+        <p>Lock a lump sum that unlocks gradually over time. 1,200 USDC over 12 months = 100 USDC available each month. Perfect for founders, teams, and disciplined savings plans.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">💓</div>
+        <h3>Dead Man's Switch</h3>
+        <p>Name a legacy contact and set an inactivity period. If you don't check in before the deadline, your contact can claim the funds. Inheritance planning without a lawyer.</p>
       </li>
     </ul>
   </section>
 
-  <!-- Sprint 23 iter 48 — Security is now visually a stand-alone
-       bar/section: darker background band + its own top+bottom
-       dividers so it reads as its own container rather than blending
-       into the features grid above. -->
+  <!-- PRODUCTIVITY FEATURES -->
+  <section id="features" class="features">
+    <h2 class="section-title">Productivity Suite</h2>
+    <p class="section-lede">
+      Encrypted notes, a bill calendar, a P&amp;L ledger, and a built-in authenticator — sealed on your device.
+    </p>
+    <ul class="feature-grid">
+      <li class="feature">
+        <div class="feature-icon">🔐</div>
+        <h3>Encrypted Notes &amp; Documents</h3>
+        <p>AES-256-CBC + HMAC-SHA256 sealed on device. Passport scans, seed backups, recovery phrases, tasks, shopping lists — all in one encrypted notebook.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">📅</div>
+        <h3>Bill Calendar</h3>
+        <p>Full-month calendar with color-coded dots for bills, reminders, tasks, and events. Five entry types, tailored forms for each.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">📊</div>
+        <h3>P&amp;L Ledger</h3>
+        <p>Auto-balancing income vs expense tracking. Tag by category, bulk-import CSV or TSV, real-time net position.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">🔑</div>
+        <h3>Built-in Authenticator</h3>
+        <p>RFC 6238 TOTP codes. Biometric-gated, encrypted alongside your notes, Google Authenticator-compatible export.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">☁️</div>
+        <h3>Google Drive Backup</h3>
+        <p>Envelope-encrypted backup of your entire vault. The cloud sees ciphertext only. One-tap restore on a new device.</p>
+      </li>
+      <li class="feature">
+        <div class="feature-icon">🔄</div>
+        <h3>Non-Custodial Swaps</h3>
+        <p>1,300+ assets via SimpleSwap. Fixed-rate, no accounts, no KYC. You sign locally — your seed never leaves your device.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="features">
+    <h2 class="section-title">Pricing</h2>
+    <p class="section-lede">
+      Free for personal use. Paid tiers for power users and institutions who need more vaults and advanced features.
+    </p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Basic</h3>
+        <p class="pricing-amount">Free</p>
+        <p class="pricing-sub">for everyone, forever</p>
+        <ul>
+          <li>10 active vaults</li>
+          <li>Standard time-locks &amp; multi-asset support</li>
+          <li>Auto-Unlock Schedules — up to $1,000/month</li>
+          <li>Recovery Delay — 1 active at a time</li>
+          <li>Legacy Contact — 1 contact, 1 vault</li>
+          <li>Full productivity suite</li>
+          <li>Non-custodial swaps</li>
+          <li>Google Drive backup</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card pricing-card-featured">
+        <h3>Plus</h3>
+        <p class="pricing-amount">$25<span class="pricing-period">/month</span></p>
+        <p class="pricing-sub">for serious investors &amp; professionals</p>
+        <ul>
+          <li>50 active vaults</li>
+          <li>Everything in Basic, all caps removed</li>
+          <li>Vesting Schedules — no dollar limit</li>
+          <li>Cooling-Off Lock — customizable duration, multiple active</li>
+          <li>Dead Man's Switch — multiple contacts, multiple vaults</li>
+          <li>Dual Approval (Multi-Sig Co-Signer)</li>
+          <li>Advanced dashboard widgets</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Unlimited</h3>
+        <p class="pricing-amount">$75<span class="pricing-period">/month</span></p>
+        <p class="pricing-sub">for institutional asset managers &amp; funds</p>
+        <ul>
+          <li>Unlimited vaults</li>
+          <li>Everything in Plus</li>
+          <li>API access</li>
+          <li>Compliance dashboard</li>
+          <li>Multi-sig approval queues</li>
+          <li>Value-at-Risk tracker</li>
+          <li>White-label options</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pricing-lifetime">
+      <strong>Lifetime Access — $750 one-time.</strong> Plus-tier features, unlimited vaults, no recurring fees ever.
+    </p>
+  </section>
+
+  <!-- TOKENIZATION -->
+  <section id="tokenization" class="tokenization">
+    <div class="tokenization-inner">
+      <span class="tokenization-eyebrow">TOKENIZATION</span>
+      <h2 class="section-title tokenization-title">Built for the tokenized economy</h2>
+      <p class="tokenization-copy">
+        The DTCC is bringing $114 trillion in assets on-chain by 2027. Franklin Templeton, WisdomTree, and Ondo
+        already have billions in tokenized real-world assets live on Stellar. When bonds need to be locked until
+        maturity, equity until vesting, and commodities until delivery — Stellar TimeLock is the lockbox.
+      </p>
+      <div class="tokenization-grid">
+        <div class="tokenization-card">
+          <h3>Bonds &amp; Debt</h3>
+          <p>Time-lock tokenized bonds until maturity. Interest payments on schedule, principal released on the unlock date.</p>
+        </div>
+        <div class="tokenization-card">
+          <h3>Equity &amp; Vesting</h3>
+          <p>Vesting schedules for tokenized equity. Gradual unlock over months or years — automated, on-chain, auditable.</p>
+        </div>
+        <div class="tokenization-card">
+          <h3>Commodities &amp; Delivery</h3>
+          <p>Lock tokenized commodities until delivery date. Escrow without the escrow agent. Smart contract enforcement.</p>
+        </div>
+        <div class="tokenization-card">
+          <h3>Institutional-Grade</h3>
+          <p>Multi-sig approval queues, compliance dashboard, API access. Built for funds, asset managers, and enterprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
   <section id="security" class="security security-bar">
     <div class="security-inner">
       <div class="security-header">
@@ -249,15 +350,14 @@
         <h2 class="section-title security-title">Security you can inspect</h2>
         <p class="security-copy">
           The cryptography that protects your seed is open source under Apache 2.0.
-          The full threat model + subsystem writeup lives in the public repo.
-          Read it. Audit it. File a PR.
+          The full threat model lives in the public repo. Read it. Audit it. File a PR.
         </p>
       </div>
       <ul class="security-list">
         <li>Android Keystore / iOS Keychain binds every seed to hardware</li>
         <li>One biometric prompt per session cache</li>
         <li>Best-effort memory zeroing after every signing + KDF call</li>
-        <li><code>allowBackup=&quot;false&quot;</code> on Android — no accidental cloud copies</li>
+        <li><code>allowBackup="false"</code> on Android — no accidental cloud copies</li>
         <li>AES-256-CBC + HMAC-SHA256 (encrypt-then-MAC) for on-device notebook data</li>
         <li>No server-side custody, ever. Backend never sees a seed.</li>
       </ul>
@@ -267,24 +367,24 @@
     </div>
   </section>
 
-  <!-- Sprint 23 iter 60 — Verifiable on-chain contract callout.
-       Links the deployed Soroban contract address so anyone can
-       inspect it on a mainnet explorer without hunting through the
-       repo. `<code>` block is copy-selectable on desktop. -->
+  <!-- ON-CHAIN CONTRACTS -->
   <section id="contract" class="contract-callout">
     <div class="contract-inner">
       <span class="contract-eyebrow">ON-CHAIN</span>
-      <h2 class="section-title contract-title">Verifiable Soroban contract</h2>
+      <h2 class="section-title contract-title">Verifiable Soroban Contracts</h2>
       <p class="contract-copy">
-        The time-lock vault primitive is a public Soroban smart contract deployed on Stellar mainnet.
+        All vault primitives are public Soroban smart contracts deployed on Stellar mainnet.
         No proxy, no upgrade key, no owner. Inspect the bytecode and history on any Stellar mainnet explorer.
       </p>
       <div class="contract-address" role="text">
+        <strong>XLM Vault:</strong><br>
         <code>CCWDMIPD4ZTTIV5LR53PD325MS6VRGF3WJEJRKNCIKK3G7H6AXJ3UE4F</code>
-
         <br><br>
-<strong>Multi-Asset Vault:</strong><br>
-<code>CBKOYL6BHVCHB4DJFVNHLGJKLCIFVRRRDVN2NRWX6TKRHQJQZQHPCACV</code>
+        <strong>Multi-Asset Vault:</strong><br>
+        <code>CBKOYL6BHVCHB4DJFVNHLGJKLCIFVRRRDVN2NRWX6TKRHQJQZQHPCACV</code>
+        <br><br>
+        <strong>Advanced Vaults (Cooling-Off, Vesting, Dead Man's Switch):</strong><br>
+        <code>CAPXQVGAD2TZNEDKZZDX3YKUBHQ2UI2XDI5AND6Z35D2YY2NZ7AJV6LM</code>
       </div>
       <div class="contract-actions">
         <a class="cta cta-ghost"
@@ -303,10 +403,7 @@
     </div>
   </section>
 
-  <!-- Sprint 23 iter 60 — FAQ accordion.
-       Uses native <details>/<summary> so the accordion works without
-       JavaScript and the copy is indexed for FAQ rich results. The
-       matching FAQPage JSON-LD in <head> mirrors these answers. -->
+  <!-- FAQ -->
   <section id="faq" class="faq">
     <div class="faq-inner">
       <span class="faq-eyebrow">FAQ</span>
@@ -320,24 +417,52 @@
         <div class="faq-body">
           <p>
             Yes. Your seed phrase and all encrypted notebook data live only on your device,
-            protected by the Android Keystore or iOS Keychain. Our backend<abbr title="Giggity!"> infrastructure</abbr> never sees your
-            keys, your ciphertext, or any personally identifiable information about your
-            wallet activity.
+            protected by the Android Keystore or iOS Keychain. Our backend infrastructure never sees your
+            keys, your ciphertext, or any personally identifiable information.
           </p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary>
-          <span>How do time-locked savings vaults work?</span>
+          <span>How do time-locked vaults work?</span>
           <span class="faq-chev" aria-hidden="true">+</span>
         </summary>
         <div class="faq-body">
           <p>
-            Each vault is a call to our public Soroban smart contract on Stellar mainnet.
-            You deposit XLM and choose an unlock date up to 1,000 days in the future.
-            Once created, no one — not even Stellar TimeLock — can withdraw before that
-            date. There is no admin key, no emergency exit, and no upgrade path.
+            Each vault is a call to a public Soroban smart contract on Stellar mainnet.
+            You deposit XLM or any Stellar token and choose an unlock date. Once created, no one —
+            not even Stellar TimeLock — can withdraw before that date. There is no admin key,
+            no emergency exit, and no upgrade path.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>What is a Cooling-Off Lock?</span>
+          <span class="faq-chev" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-body">
+          <p>
+            A Cooling-Off Lock lets you initiate a withdrawal at any time, but funds are only released
+            after a delay you choose (24 hours to 7 days). During the countdown, you can cancel the
+            withdrawal. If someone gains unauthorized access to your wallet, you have the full delay
+            window to stop the transfer.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>What is a Dead Man's Switch?</span>
+          <span class="faq-chev" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-body">
+          <p>
+            You set a backup address and an inactivity period. You must periodically check in by
+            tapping "Ping." If you don't check in before the deadline, your designated contact
+            can claim the funds. It's non-custodial inheritance planning — no lawyers, no probate.
           </p>
         </div>
       </details>
@@ -349,11 +474,10 @@
         </summary>
         <div class="faq-body">
           <p>
-            Exchanges and custodial platforms require a numeric or text memo to credit
-            your deposit. If you paste a destination that our address book flags as an
-            exchange or a casino, the wallet refuses to sign the transaction until you add
-            a memo. This blocks the single most common cause of permanently lost Stellar
-            Lumens.
+            Exchanges and custodial platforms require a numeric or text memo to credit your deposit.
+            If you paste a destination that our address book flags as an exchange, the wallet refuses
+            to sign until you add a memo. This blocks the single most common cause of permanently
+            lost Stellar Lumens.
           </p>
         </div>
       </details>
@@ -365,26 +489,9 @@
         </summary>
         <div class="faq-body">
           <p>
-            No. During onboarding you can pick a productivity-only mode that hides the
-            Crypto tab entirely. You still get the encrypted notes, bill calendar, P&amp;L
-            ledger, and built-in authenticator, and you never see a Stellar address unless
-            you opt in later from Settings.
-          </p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>
-          <span>What encryption does the notebook use?</span>
-          <span class="faq-chev" aria-hidden="true">+</span>
-        </summary>
-        <div class="faq-body">
-          <p>
-            Notebook data uses PBKDF2 to stretch your wallet-derived material, HKDF-SHA-256
-            to split subsystem keys, and AES-256-CBC for encryption. Every note, bill,
-            ledger entry, and authenticator secret is sealed before it hits AsyncStorage.
-            Even the Google Drive backup blob is ciphertext — the cloud sees an opaque
-            envelope, never plaintext.
+            No. During onboarding you can pick a productivity-only mode that hides the Crypto tab
+            entirely. You still get encrypted notes, bill calendar, P&amp;L ledger, and built-in
+            authenticator, and you never see a Stellar address unless you opt in later.
           </p>
         </div>
       </details>
@@ -396,10 +503,10 @@
         </summary>
         <div class="faq-body">
           <p>
-            All features are free. Revenue comes from optional cross-chain swap partner fees. 
-            No subscriptions, no ads, no data selling." All wallet features — send,
-            receive, swap, and time-lock vaults — are free forever. We never take a
-            protocol fee on your transactions.
+            The Basic tier is free forever — all productivity features, swaps, and up to 10 vaults.
+            Plus ($25/month) and Unlimited ($75/month) tiers are for power users and institutions
+            who need more vaults and advanced features. Swap affiliate fees also contribute.
+            No ads, no data selling, no protocol fees on your transactions.
           </p>
         </div>
       </details>
@@ -411,7 +518,7 @@
         </summary>
         <div class="faq-body">
           <p>
-            The client-side cryptography and the Soroban vault contract are both public
+            The client-side cryptography and the Soroban vault contracts are all public
             under Apache 2.0 in the
             <a href="https://github.com/StellarTimeLock/stellartimelock-core"
                target="_blank"
@@ -448,3 +555,4 @@
 <script src="/assets/main.js" defer></script>
 </body>
 </html>
+```

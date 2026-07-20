@@ -519,7 +519,164 @@ a:hover { color: #4ecdc4; }
   color: var(--teal);
   font-weight: 700;
 }
+/* ---------------- Pricing ---------------- */
 
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  max-width: 1080px;
+  margin: 0 auto 32px;
+}
+
+.pricing-card {
+  padding: 32px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-align: center;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+.pricing-card:hover {
+  border-color: rgba(20,184,166,0.4);
+  transform: translateY(-2px);
+}
+.pricing-card h3 {
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.pricing-card-featured {
+  border-color: var(--teal);
+  box-shadow: 0 0 32px -8px var(--teal-glow);
+}
+
+.pricing-amount {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+.pricing-period {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+.pricing-sub {
+  color: var(--text-tertiary);
+  font-size: 12px;
+  margin: 0 0 20px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.pricing-card li {
+  padding: 8px 0 8px 24px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 13px;
+  position: relative;
+}
+.pricing-card li:before {
+  content: "\2713";
+  color: var(--teal);
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+  font-size: 12px;
+}
+.pricing-card li:last-child {
+  border-bottom: none;
+}
+
+.pricing-lifetime {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.pricing-lifetime strong {
+  color: var(--text);
+}
+
+/* ---------------- Tokenization ---------------- */
+
+.tokenization {
+  background: linear-gradient(180deg, rgba(212,175,55,0.06) 0%, rgba(212,175,55,0) 100%),
+              var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+}
+.tokenization-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 32px;
+  text-align: center;
+}
+.tokenization-eyebrow {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  background: rgba(212, 175, 55, 0.12);
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+.tokenization-title {
+  margin: 0 0 16px;
+}
+.tokenization-copy {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.tokenization-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.tokenization-card {
+  padding: 24px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 12px;
+  text-align: left;
+  transition: border-color 200ms ease;
+}
+.tokenization-card:hover {
+  border-color: var(--gold);
+}
+.tokenization-card h3 {
+  color: var(--gold);
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+.tokenization-card p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .pricing-card { padding: 24px 16px; }
+  .tokenization-inner { padding: 48px 20px; }
+  .tokenization-grid { grid-template-columns: 1fr; }
+}
 @media (max-width: 640px) {
   .contract-callout { padding: 40px 20px; }
   .faq { padding: 40px 20px; }
